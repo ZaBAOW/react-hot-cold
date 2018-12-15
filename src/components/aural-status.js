@@ -1,14 +1,18 @@
 import React from 'react';
 
-export default function AuralStatus(props) {
-  return (
-    <p
-      id="status-readout"
-      className="visuallyhidden"
-      aria-live="assertive"
-      aria-atomic="true"
-    >
-      {props.auralStatus}
-    </p>
-  );
+// AuralStatus recieves prop from header and returns
+// an auralStatus element that conveys the correct 
+// circumstance of the game to the user.
+export defult function AuralStatus(props) {
+    return(
+        <p
+          id='status-readout'
+          className='visuallyhidden'    
+          aria-live='assertive'
+          aria-atomic='true'
+        >
+          {props.auralStatus}
+        </p>
+    )
 }
+

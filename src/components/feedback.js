@@ -2,6 +2,10 @@ import React from 'react';
 
 import './feedback.css';
 
+// grabs feedback prop from guessSection.js and runs the value
+// through a conditional.  This will trigger after every
+// user guess and return the appropriate feedback string
+// depending on how hot or cold the user was to the correct answer.
 export default function Feedback(props) {
   /** 
    * Below, we'll use the guessCount to generate a key so that React treats the feedback message 
