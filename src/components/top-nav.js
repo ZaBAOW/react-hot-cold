@@ -2,6 +2,9 @@ import React from 'react';
 
 import './top-nav.css';
 
+// returns the all elements included in the top navigation
+// section of index.html and sets events for restartGame()
+// and show status via listening for onGenerateAuralUpdate()
 export default function TopNav(props) {
   return (
     <nav>
