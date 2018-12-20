@@ -1,11 +1,14 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
+import {generateAuralUpdate, restartGame} from '../actions';
 
 import './top-nav.css';
 
 // returns the all elements included in the top navigation
 // section of index.html and sets events for restartGame()
 // and show status via listening for onGenerateAuralUpdate()
-export default function TopNav(props) {
+export function TopNav(props) {
   return (
     <nav>
       <ul className="clearfix">
@@ -43,3 +46,5 @@ export default function TopNav(props) {
     </nav>
   );
 }
+
+export default connect()(TopNav);

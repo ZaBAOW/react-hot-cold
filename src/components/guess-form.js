@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
+import {makeGuess} from '../actions';
 import './guess-form.css';
 
 // Will first check to see if a guess is made by the user
@@ -7,7 +8,7 @@ import './guess-form.css';
 // return a new state of the guess form with the guessed number
 // having been added to the array of guesses at the bottom of the form
 // and the guess form being reset.
-export default class GuessForm extends React.Component {
+export class GuessForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
 
@@ -46,3 +47,5 @@ export default class GuessForm extends React.Component {
     );
   }
 }
+
+export default connect ()(GuessForm);

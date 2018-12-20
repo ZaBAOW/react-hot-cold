@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {connect} from 'react-reducx';
 import './guess-count.css';
 
 // grabs the guess array length prop from status-section.js and
@@ -15,3 +15,9 @@ export default function GuessCount(props) {
         </h2>
     );
 }
+
+cosnt mapStateToProps = state = ({
+    guessCount: state.guessCount.length
+});
+
+export default connect(mapStateToProps)(GuessCount);
